@@ -15,9 +15,7 @@ import java.net.URL
  
 try {
     node {
-        wrap([$class: 'AnsiColorBuildWrapper']) {
-            stage '\u001B[31m\u2776 Stage 1 - Property Output'
-        }
+        stage '\u2776 Stage 1 - Property Output'
         
         echo "\u2600 SOURCE_BRANCH=${env.BRANCH_NAME}"
         
@@ -28,9 +26,7 @@ try {
         def workspace = pwd()
         echo "\u2600 workspace=${workspace}"
  
-        wrap([$class: 'AnsiColorBuildWrapper']) {
-            stage '\u001B[31m\u2777 Stage 2 - Verify and Build'
-        }
+        stage '\u2777 Stage 2 - Verify and Build'
 
         // if branch name == 'master'
         // do whatever is required for master branch
