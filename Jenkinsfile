@@ -4,6 +4,7 @@
  * Sample Jenkinsfile for Jenkins2 Pipeline
  * from https://github.com/hotwilson/jenkins2/edit/master/Jenkinsfile
  * by wilsonmar@gmail.com 
+ * edited by: Cole
  */
  
 import hudson.model.*
@@ -57,18 +58,18 @@ catch (exc) {
     */
 } finally {
   
- (currentBuild.result != "ABORTED") && node("master") {
+ //(currentBuild.result != "ABORTED") && node("master") {
      // Send e-mail notifications for failed or unstable builds.
      // currentBuild.result must be non-null for this step to work.
      //step([$class: 'Mailer',
      //   notifyEveryUnstableBuild: true,
      //   recipients: "${email_to}",
      //   sendToIndividuals: true])
-     println 'Some finally step'
-}
+    println 'Some finally step'
+//}
  
  // Must re-throw exception to propagate error:
- if (err) {
-     throw err
- }
+    if (err) {
+        throw err
+    }
 }
