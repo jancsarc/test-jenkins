@@ -10,9 +10,10 @@
 // if branch name like 'hotfix'
 // do build instructions
 
-stage '\u2776 Stage 1 - Branch Environment'
+stage '\u2776 Stage 1 - Retrieve Branch Environment'
 
 println env.BRANCH_NAME
-println {env.BRANCH_NAME}
-println env.JOB_NAME.replaceFirst('.+/', '')
-//{env.BRANCH_NAME}
+
+if (env.BRANCH_NAME == 'develop' ) {
+    println "In Development Branch"
+} 
