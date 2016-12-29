@@ -1,4 +1,4 @@
-//Jenkinsfile (Scripted Pipeline)
+Jenkinsfile (Scripted Pipeline)
 // if branch name == 'master'
 // do whatever is required for master branch
 //if branch name like 'feature%'
@@ -25,4 +25,4 @@ def branches = proc.in.text.readLines().collect {
     it.replaceAll(/[a-z0-9]*\trefs\/heads\//, '') 
 }
 
-return branches
+println branches
