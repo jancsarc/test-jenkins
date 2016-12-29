@@ -1,4 +1,4 @@
-//Jenkinsfile (Scripted Pipeline)
+#!/usr/bin/env groovy
 // if branch name == 'master'
 // do whatever is required for master branch
 //if branch name like 'feature%'
@@ -9,6 +9,8 @@
 // do build tests -> deploy to QA -> update JIRA ticket to closed (through GitHub)
 // if branch name like 'hotfix'
 // do build instructions
+
+stage '\u2776 Stage 1 - Branch Environment'
 
 def gitURL = "https://github.com/jancsarc/test-jenkins.git"
 def command = "git ls-remote -h $gitURL"
