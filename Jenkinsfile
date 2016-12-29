@@ -12,4 +12,4 @@
 
 stage '\u2776 Stage 1 - Branch Environment'
 
-println ${env.BRANCH_NAME}
+println {env.BRANCH_NAME}
