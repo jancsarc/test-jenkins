@@ -1,4 +1,4 @@
-Jenkinsfile (Scripted Pipeline)
+//Jenkinsfile (Scripted Pipeline)
 // if branch name == 'master'
 // do whatever is required for master branch
 //if branch name like 'feature%'
