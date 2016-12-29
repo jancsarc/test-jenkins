@@ -6,7 +6,7 @@
  * by wilsonmar@gmail.com 
  * edited by: Cole
  */
- 
+// this is a comment
 import hudson.model.*
 import hudson.EnvVars
 import groovy.json.JsonSlurperClassic
