@@ -67,9 +67,4 @@ catch (exc) {
      //   sendToIndividuals: true])
     println 'Some finally step'
 //}
- 
- // Must re-throw exception to propagate error:
-    if (err) {
-        throw err
-    }
 }
